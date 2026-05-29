@@ -1,4 +1,4 @@
-# Research Paper Brain
+# Scholar Minds
 
 ### Offline Research Paper Q&A using RAG on Edge Devices
 
@@ -49,7 +49,7 @@ Answer + Citation
 | -------------------- | ------------------------------- |
 | Programming Language | Python                          |
 | Framework            | LangChain                       |
-| LLM                  | Qwen2.5:1.5B / DeepSeek-R1:1.5B |
+| LLM                  | Qwen2.5:1.5B  |
 | Vector Database      | ChromaDB                        |
 | PDF Processing       | PyMuPDF                         |
 | Frontend             | Streamlit                       |
@@ -184,13 +184,6 @@ Retrieved context is passed to a local LLM through Ollama to generate answers wi
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots inside:
-
-```text
-docs/screenshots/
-```
 
 Example:
 
@@ -247,5 +240,4 @@ This project is licensed under the MIT License.
 * LangChain
 * ChromaDB
 * Streamlit
-* Hugging Face
 * NVIDIA Jetson
