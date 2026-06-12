@@ -1,3 +1,4 @@
+# Scholar Minds - Offline Research Paper RAG Engine
 import argparse
 import os
 
