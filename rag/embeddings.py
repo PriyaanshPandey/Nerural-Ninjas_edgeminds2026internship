@@ -1,31 +1,20 @@
-from sentence_transformers import SentenceTransformer
+from typing import List
 
-# Load model once
-model = SentenceTransformer("all-MiniLM-L6-v2")
+import ollama
 
 
-def create_embeddings(chunks):
-    texts = [chunk["text"] for chunk in chunks]
+class EmbeddingsManager:
+    """Manages embedding generation for text chunks via Ollama."""
 
-    embeddings = model.encode(
-        texts,
-        show_progress_bar=True
-    )
+    def __init__(self, model_name: str = "nomic-embed-text"):
+        self.model_name = model_name
 
-    return embeddings
+    def get_embeddings(self, texts: List[str]) -> List[List[float]]:
+        embeddings: List[List[float]] = []
+        for text in texts:
+            resp = ollama.embeddings(model=self.model_name, prompt=text)
+            embeddings.append(resp["embedding"])
+        return embeddings
 
-from pdf_parser import extract_text
-from chunking import create_chunks
-
-if __name__ == "__main__":
-
-    pages = extract_text(
-        "data/sample_papers/sample_paper.pdf"
-    )
-
-    chunks = create_chunks(pages)
-
-    embeddings = create_embeddings(chunks)
-
-    print("Number of embeddings:", len(embeddings))
-    print("Embedding dimension:", len(embeddings[0]))
+    def get_query_embedding(self, query: str) -> List[float]:
+        return self.get_embeddings([query])[0]
