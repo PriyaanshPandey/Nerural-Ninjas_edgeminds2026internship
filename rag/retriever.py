@@ -58,10 +58,11 @@ class ChromaRetriever:
             embeddings=embeddings,
         )
 
-    def query(self, query_text: str, top_k: int = 4) -> List[Chunk]:
+    def query(self, query_text: str, top_k: int = 4, source_filter: str = None) -> List[Chunk]:
         expanded_query = smart_query(query_text)
         query_emb = self._embedder.get_query_embedding(expanded_query)
-        res = self._collection.query(query_embeddings=[query_emb], n_results=top_k)
+        where_clause = {"source": source_filter} if source_filter else None
+        res = self._collection.query(query_embeddings=[query_emb], n_results=top_k, where=where_clause)
         
         res_docs = res.get("documents")
         docs = res_docs[0] if res_docs and len(res_docs) > 0 else []
@@ -85,7 +86,11 @@ class ChromaRetriever:
             has_chunk_0 = any(c.index == 0 for c in results)
             has_chunk_1 = any(c.index == 1 for c in results)
             
-            sources = list(set([c.source for c in results])) if results else ["Attention Is all you need.pdf"]
+            if source_filter:
+                sources = [source_filter]
+            else:
+                sources = list(set([c.source for c in results])) if results else ["Attention Is all you need.pdf"]
+                
             for src in sources:
                 if not has_chunk_0:
                     try:

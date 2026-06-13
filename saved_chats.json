@@ -1,0 +1,236 @@
+[
+  {
+    "name": "Chat 1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize this paper",
+        "timestamp": "2026-06-13T14:34:42.083259"
+      },
+      {
+        "role": "user",
+        "content": "Summarize this paper",
+        "timestamp": "2026-06-13T14:34:44.355341"
+      },
+      {
+        "role": "assistant",
+        "content": "- Abstract:\n  * The paper proposes a new simple network architecture called Transformer based solely on attention mechanisms.\n  * The authors achieved a single-model state-of-the-art BLEU score of 41.8 on the WMT 2014 English-to-French translation task after training for 3.5 days on eight GPUs.\n\n- Table 1:\n  - Maximum path lengths, per-layer complexity and minimum number of sequential operations\n    - Layer Type Complexity per Layer Sequential Maximum Path Length Operations Self-Attention O(n^{2} · d) O(1) O(1) Recurrent O(n · d^{2}) O(n) O(n) Convolutional O(k · n · d^{2}) O(1) O(log_{k}(n)) Self-Attention (restricted) O(r · n · d) O(1) O(n/r)\n  - Positional encoding\n    * PE_{(pos,2i)} = sin(pos/10000^{2i/dmodel})\n    * PE_{(pos,2i+1)} = cos(pos/10000^{2i/dmodel})\n\n- Positional Encoding:\n  - The positional encodings have the same dimension d_model as the embeddings.\n  - There are many choices of positional encodings, learned and fixed [9].\n  - In this work, they use sine and cosine functions of different frequencies: PE_{(pos,2i)} = sin(pos/10000^{2i/dmodel}) PE_{(pos,2i+1)} = cos(pos/10000^{2i/dmodel})\n  - The wavelengths form a geometric progression from 2π to 10000 · 2π.\n  - They chose this function because they hypothesized it would allow the model to easily learn to attend by relative positions.\n\n- Self-Attention:\n  - In self-attention, we consider three desiderata: total computational complexity per layer, amount of sequential information used, and number of attention heads.\n  - The authors found that their Transformer architecture achieved a single-model state-of-the-art BLEU score of 41.8 on the WMT 2014 English-to-French translation task after training for 3.5 days on eight GPUs.\n\n- Position-wise Feed-Forward Networks:\n  - Each layer in the encoder and decoder contains a fully connected feed-forward network.\n  - The feed-forward network applies to each position separately and identically, using two linear transformations with a ReLU activation in between.\n  - FFN(x) = max(0, xW_1 + b_1) W_2 + b_2\n\n- Embeddings and Softmax:\n  - The authors use learned embeddings to convert the input tokens and output tokens to vectors of dimension d_model.\n  - They also use the usual learned linear transformation and softmax function to convert the decoder output to predicted next-token probabilities.\n\n- Question: Why Self-Attention\n  - The authors compare various aspects of self-attention layers to the recurrent and convolutional layers commonly used for mapping one variable-length sequence of symbol representations.",
+        "timestamp": "2026-06-13T14:35:01.423554"
+      }
+    ],
+    "timestamp": "2026-06-13 14:41"
+  },
+  {
+    "name": "Chat 2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Summarize this paper",
+        "timestamp": "2026-06-13T15:09:27.511003"
+      },
+      {
+        "role": "user",
+        "content": "Summarize this paper",
+        "timestamp": "2026-06-13T15:09:33.879390"
+      },
+      {
+        "role": "assistant",
+        "content": "*Context:*\n\n*Source File: 2005.14165v4.pdf*\n\n*Summary:* \nDirectly summarizes the main points of the paper without providing additional context.\n\n*Task Agnostic Few-Shot Learning*\n*Fine-Tuning on Speciﬁc Task Requires Datasets of Thousands or Tens of Thousands of Examples*\n\n*Example: GPT-3, an autoregressive language model with 175 billion parameters, is trained on a large corpus of text and then fine-tuned on a speciﬁc task without any gradient updates or ﬁne-tuning.*\n\n*Task-Speciﬁc Few-Shot Performance*\n*GPT-3 Achieves Strong Performance on Many NLP Datasets*\n\n*Suitable Tasks: Translation, Question-Answhring, Cloze Tasks; Domain Adaptation Tasks (e.g., unscrambling words, using a novel word in a sentence, 3-digit arithmetic)*\n\n*Few-Shot Learning Struggles and Methodological Issues*\n*GPT-3's Few-Shot Learning Still Struggles with Some Datasets*\n\n*Methodological Issues: Training on Large Web Corpora; Human Evaluation of GPT-3-Generated Articles*\n\n*Broader Societal Impacts and Discussion of Results*:",
+        "timestamp": "2026-06-13T15:09:38.977725"
+      },
+      {
+        "role": "user",
+        "content": "Summarize this paper in 150 words in 10 points",
+        "timestamp": "2026-06-13T15:10:18.311244"
+      },
+      {
+        "role": "assistant",
+        "content": "* \n* The authors demonstrate that scaling up language models greatly improves task-agnostic, few-shot performance by training a GPT-3 model with 175 billion parameters on a large corpus of text.\n* GPT-3 is applied without any gradient updates or fine-tuning for all tasks, including translation, question-answering, and cloze tasks.\n* The authors identify some datasets where GPT-3's few-shot learning still struggles, as well as some datasets where GPT-3 faces methodological issues related to training on large web corpora.\n* The authors report strong performance on many NLP datasets, including translation, question-answering, and cloze tasks, as well as several tasks that require on-the-fly reasoning or domain adaptation.\n* GPT-3 can generate samples of news articles which human evaluators have difficulty distinguishing from articles written by humans.\n* The authors discuss broader societal impacts of this finding and of GPT-3 in general.\n* To appear in proceedings of Sinn und Bedeutung 23, the data can be found at [https://github.com/mcdm/CommitmentBank/](https://github.com/mcdm/CommitmentBank/)",
+        "timestamp": "2026-06-13T15:10:29.006771"
+      },
+      {
+        "role": "user",
+        "content": "Summarize this paper in 250 words in 10 points",
+        "timestamp": "2026-06-13T15:10:48.448305"
+      },
+      {
+        "role": "assistant",
+        "content": "• The authors propose a method for few-shot learning of language models by scaling up existing architectures.\n• They use the GPT-3 model with 175 billion parameters as a starting point and train it on a large corpus without fine-tuning tasks.\n• This approach improves task-agnostic, few-shot performance by several orders of magnitude.\n• The authors test the effectiveness of their method on various NLP benchmarks and datasets.\n• They achieve strong performance on many translation, question-answering, and cloze tasks, as well as several domain adaptation tasks.\n• The GPT-3 model is also used to generate news articles that human evaluators can distinguish from real articles.\n• The authors identify some datasets where the few-shot learning of language models still struggles or faces methodological issues.\n• They also report on experiments measuring human ability to distinguish synthetic news articles from real news articles.\n• The paper discusses broader societal impacts of advancements in few-shot learning and its potential applications.\n• The authors conclude that scaling up language models greatly improves task-agnostic, few-shot performance, sometimes reaching competitiveness with prior state-of-the-art fine-tuning approaches. [2005.14165v4.pdf]\n• The method used is based on autoregressive language modeling with 175 billion parameters and achieves strong performance across various NLP benchmarks.",
+        "timestamp": "2026-06-13T15:10:53.224040"
+      },
+      {
+        "role": "user",
+        "content": "what methodolgy is used here",
+        "timestamp": "2026-06-13T15:11:59.167794"
+      },
+      {
+        "role": "assistant",
+        "content": "* \n\n- Multi-head attention is used to process input and output sequences of variable length, with 8 layers of self-attention.\n- The method uses additive attention for the compatibility function, which computes dot products of queries and keys using a feed-forward network with a single hidden layer.\n- The dot product is scaled by √dk before being computed.\n\n\n- Multi-head attention instead of performing a single attention function with d_model-dimensional keys, values, and queries, where h = 8.\n- Each input and output position is projected to d_k dimensions using learned linear projections (h x d_k).\n- The attention function is performed in parallel on these projected versions of queries, keys, and values for d_v dimensions.\n\n\n- Position-wise feed-forward networks are used as sub-layers in the encoder and decoder.\n- Each layer consists of two linear transformations with a ReLU activation, followed by W2 * b2 + b2 (where W1 = W2 = 1) and max(0, xW1 + b1).\n\n\n- The maximum path length between any two input and output positions is compared to sequential operations in recurrent layers.\n- Self-attention layers have a constant number of sequentially executed operations for all positions.\n\n\n- Transformer architecture is used to handle large inputs and outputs such as images, audio, and video.\n- The code for training and evaluating the models is available at https://github.com/tensorflow/tensor2tensor.",
+        "timestamp": "2026-06-13T15:12:04.373301"
+      },
+      {
+        "role": "user",
+        "content": "who are the authors, and what is title of paper",
+        "timestamp": "2026-06-13T15:12:36.623812"
+      },
+      {
+        "role": "assistant",
+        "content": "- Authors: Noam Smith\n- Title of Paper: Attention Is All You Need\n\n* Work performed while at Google Brain: [sample_paper.pdf]\n* Work performed while at Google Research: [sample_paper.pdf]",
+        "timestamp": "2026-06-13T15:12:38.163300"
+      },
+      {
+        "role": "user",
+        "content": "What are the key Findings of This paper",
+        "timestamp": "2026-06-13T15:13:46.517700"
+      },
+      {
+        "role": "assistant",
+        "content": "- The paper presents a Transformer model for multi-head attention and its variants.\n- Attention function can be described as mapping query and key-value pairs to an output vector.\n- Variants of the Transformer architecture include dot-product attention and additive attention with scaling.\n- Dot-product attention is faster and more space-efficient in practice due to optimized matrix multiplication code.\n- Additive attention outperforms dot product attention for larger values of d_k without scaling.\n- Multi-head attention projects queries, keys, and values linearly with different dimensions (d_k, d_v) 4 times each. [1]\n- Dot-product attention's output has mean 0 and variance d_k [2].\n- The Transformer model achieves state-of-the-art results on English constituency parsing tasks despite strong structural constraints and longer input lengths.\n- The paper compares the performance of different variants of the Transformer architecture on this task.",
+        "timestamp": "2026-06-13T15:13:54.263963"
+      },
+      {
+        "role": "user",
+        "content": "What are the key Findings of This paper",
+        "timestamp": "2026-06-13T15:14:04.527856"
+      },
+      {
+        "role": "assistant",
+        "content": "- People’s ability to identify whether news articles are model-generated decreases as model size increases: accuracy on deliberately-bad control model is 88%, compared to GPT-3 175B which has an accuracy of 52%.\n- Accuracy of GPT-3 175B is lower than the control model due to increased output randomness:\n \n• Mean accuracy is 95% with confidence intervals (low, hi) t compared to control (p-value): “I don’t know” assignments\n- Benchmark contamination analysis shows potential contamination in training set for PIQA and Winograd results:\n  • Performance on most benchmarks changed negligibly, but some were flagged for further review. \n  • On inspection we find evidence of contamination of PIQA and Winograd results, marked with an asterisk.\n  • We also found no evidence that other benchmarks are affected.\n- Task phrasing and specifications: \n\n• Context → Article: Informal conversation is an important part of any business relationship Before you start a discussion, however, make sure you understand which topics are suitable and which are considered taboo in a particular culture. Latin Americans enjoy sharing information about their local history, art and customs. You may expect questions about your family, and be sure to show pictures of your children. You may feel free to ask similar questions of your Latin American friends.\n• The French think of conversation as an art form, and they enjoy the value of lively discussions as well as disagreements. For them, arguments can be interesting and they can cover pretty much or any topic as long as they occur in are respectful and intelligent manner.\n• In the United States, business people like to discuss a wide range of topics, including opinions about work, family, hobbies, and politics. In Japan, China, and Korea, however, people are much more private; They do not share much about their thoughts, feelings, or emotions because they feel that doing so might take away from the harmonious business relationship they’re trying to build.\n• Middle Easterners are also private about their personal lives and family matters. It is considered rude, for example,\n- Winograd: \n  • The overlap analysis flagged 45% of examples, and found a 2.6% decrease in performance on the clean subset. Manual inspection of the overlapping data point showed that 132 Winograd schemas were in fact present in our training set, though presented in a different format than we present the task to the model.\n\n• Question: What are the key Findings of This paper",
+        "timestamp": "2026-06-13T15:14:12.341886"
+      }
+    ],
+    "timestamp": "2026-06-13 15:14"
+  },
+  {
+    "name": "Chat 3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Give me summary of this paper",
+        "timestamp": "2026-06-13T15:39:18.284819"
+      },
+      {
+        "role": "assistant",
+        "content": "* The paper discusses the use of mobile devices for English language study among advanced learners.\n* The data were collected from 20 students through a semi-structured interview.\n* Qualitative and quantitative analysis was performed on the gathered data.\n* The analysis revealed that some subjects manifested heightened awareness about the advantageous role of mobile devices in their learning endeavors.\n* Students used mobile devices to access online resources and language tools, such as Google Translate, Duolingo, and Fiszkoteka.",
+        "timestamp": "2026-06-13T15:39:24.111179"
+      },
+      {
+        "role": "user",
+        "content": "What are the key Findings of This paper",
+        "timestamp": "2026-06-13T15:39:40.535552"
+      },
+      {
+        "role": "assistant",
+        "content": "- Table 1: MobDs usage descriptions\n  • Smartphones are the most often used mobile devices by students.\n  • Participants reported using their mobile devices for about 3.80 years on average.\n  • 45% of participants started using mobile devices at senior high school and university, respectively.\n  • Students claimed to use mobile devices more frequently with time (i.e., starting at senior high school).\n- Thematic categories: usage of mobile devices, reasons for using mobile devices, resources and tools, mobile encounters, language practiced, study performance\n- Usage of mobile devices\n  • 55% of participants regarded themselves as experienced or fairly experienced users.\n  • All but one participant claimed to use mobile devices more frequently with time.\n- Reasons for using mobile devices\n  • Students used mobile devices for English language study in order to learn the language much more frequently.",
+        "timestamp": "2026-06-13T15:39:43.562066"
+      }
+    ],
+    "timestamp": "2026-06-13 15:40"
+  },
+  {
+    "name": "Chat 4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "what are key findings of this paper, tell in bullet points",
+        "timestamp": "2026-06-13T17:19:52.040782"
+      },
+      {
+        "role": "user",
+        "content": "what are key findings of this paper, tell in bullet points",
+        "timestamp": "2026-06-13T17:19:57.644869"
+      },
+      {
+        "role": "assistant",
+        "content": "- In addition to the two sub-layers in each encoder layer, the decoder inserts a third sub-layer, which performs multi-head attention over the output of the encoder stack.\n- Similar to the encoder, we employ residual connections around each of the sub-layers, followed by layer normalization.\n- We also modify the self-attention sub-layer in the decoder stack to prevent positions from attending to subsequent positions.\n- This masking, combined with fact that the output embeddings are offset by one position, ensures that the predictions for position i can depend only on the known outputs at positions less than i.\n- 3.2 Attention\n  - An attention function can be described as mapping a query and a set of key-value pairs to an output, where the query, keys, values, and output are all vectors.\n  - The output is computed as a weighted sum [weighted sum]\n  \n- Table 3: Variations on the Transformer architecture\n  - Unlisted values are identical to those of the base model. All metrics are on the English-to-German translation development set, newstest2013. Listed perplexities are per-wordpiece, according to our byte-pair encoding, and should not be compared to per-word perplexities. N dmodel dff h d_{k} d_{v} Pdrop ϵls train PPL BLEU params steps (dev) (dev) ×10^{6} base 6 512 2048 8 64 64 0.1 0.1 100K 4.92 25.8 65 (A) 1 512 512 5.29 24.9 4 128 128 5.00 25.5 16 32 32 4.91 25.8 32 16 16 5.01 25.4 (B) 16 5.16 25.1 58 32 5.01 25.4 60 (C) 2 6.11 23.7 36 4 5.19 25.3 50 8 4.88 25.5 80 256 32 32 5.75 24.5 28 1024 128 128 4.66 26.0 168 1024 5.12 25.4 53 4096 4.75 26.2 90 (D) 0.0 5.77 24.6 0.2 4.95 25.5 0.0 4.67 25.3 0.2 5.47 25.7 (E) positional embedding instead of sinusoids 4.92 25.7 big 6 1024 4096 16 0.3 300K 4.33 26.4 213 development set, newstest2013.\n  \n- We used beam search as described in the previous section, but no checkpoint averaging. We present these results in Table 3. In Table 3 rows (A), we vary the number of attention heads and the attention key and value dimensions, keeping the amount of computation constant, as described in Section 3.2.2.\n  \n- While single-head attention is 0.9 BLEU worse than the best setting, quality also drops off with too many heads.\n- In Table 3 rows (B), we observe that reducing the attention key size d_{k} hurts model quality. This suggests that determining compatibility is not easy and that a more sophisticated c\n- We further observe in rows (C) and (D) that, as expected, bigger models are better, and dropout is very helpful in avoiding over-fitting.\n  \n- In row (E), we replace our sinusoidal positional encoding with learned positional embeddings [9], and observe nearly identical results to the base model.",
+        "timestamp": "2026-06-13T17:20:09.093369"
+      },
+      {
+        "role": "user",
+        "content": "what are key findings of this paper, tell in bullet points",
+        "timestamp": "2026-06-13T17:20:26.458560"
+      },
+      {
+        "role": "user",
+        "content": "what are key findings of this paper, tell in bullet points",
+        "timestamp": "2026-06-13T17:20:33.008674"
+      },
+      {
+        "role": "assistant",
+        "content": "- The paper discusses attention mechanisms in the Transformer architecture.\n- Attention functions map query and key vectors to an output vector with weighted sum properties.\n- Dot-product attention is faster and more efficient than additive attention.\n- The authors modify dot-product attention to prevent compatibility between query, key, and value vectors by scaling it.\n- Multi-head attention is performed by linearly projecting queries, keys, and values across different dimensions using learned projections.\n- Dot products grow large in magnitude for large model parameters due to softmax gradients being extremely small.\n- Modifying the dot product function with √d_k increases its efficiency for larger models.\n- The authors compare the performance of various attention mechanisms on the Transformer architecture.\n- They report that increasing the number of attention heads and dimensions does not significantly improve quality, while reducing key dimension size hurts model quality.\n- Larger models with dropout are better at avoiding over-fitting in some tasks like English Constituency Parsing.",
+        "timestamp": "2026-06-13T17:20:35.757112"
+      },
+      {
+        "role": "user",
+        "content": "what are key findings of this paper, tell in bullet points",
+        "timestamp": "2026-06-13T17:20:37.176430"
+      },
+      {
+        "role": "assistant",
+        "content": "- The authors propose a modification of the Transformer architecture by introducing residual connections and layer normalization.\n- They experiment with different attention mechanisms, including dot-product and additive attention, to find which one performs best for multi-head self-attention.\n- For dot-product attention, they scale the dot products by 1^(√d_k) to counteract the effect of growing gradients in large dimensions d_k.\n- They linearly project queries, keys, and values into different dimensions (d_k, d_v, and h times the learned projections) before performing attention functions in parallel.\n- The attention function is computed as a weighted sum of query and key-value pairs using dot-product attention or compatibility function using add-itive attention.\n- The authors compare the performance of their modification with that of the base model on various tasks, including English-to-German translation development set (newstest2013) and English constituency parsing.",
+        "timestamp": "2026-06-13T17:20:39.979177"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:21:24.622252"
+      },
+      {
+        "role": "assistant",
+        "content": "* 3.3. Data collection and analysis: semi-structured interview\n* Table 1 shows mobile devices usage descriptions \n* - The table demonstrates that smartphones were the most often used mobile devices by the students.\n* - In addition, the numerical information indicates that the participants on average had been using them for English language study for about 3.80 years (minimum 2, maximum 6 years).\n* 9 (45%) and 11 (55%) of the subjects started using their mobile devices at senior high school and university, respectively.\n* - It should also be added that with the exception of one student (i.e. S9), all the other participants claimed to use their mobile devices in order to learn English much more frequently with time.\n* 4.3. Resources and tools: analysis\n* - The analysis revealed that the students made use of both online resources and mobile apps.\n* - The most frequently used language tools were online dictionaries (e.g. diki, ColorDict Dictionary) and a variety of mobile apps, such as Google Translate, Duolingo and Fiszkoteka.\n* - Two students also reported using Voscreen and WhatsApp, i.e. mobile apps for watching video and communicating with people, respectively.\n* 6 Minute Dictionary\n*",
+        "timestamp": "2026-06-13T17:21:28.507756"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:21:36.126465"
+      },
+      {
+        "role": "assistant",
+        "content": "- **Methodology:**\n  • The study used a semi-structured interview format.\n  • Guiding questions and prompts were prepared in advance.\n- **Data Collection Tools:**\n  • Semi-structured interviews.\n  • Pre-recorded digital recordings for permission to be digitally recorded by all participants.\n  • Quantitative data analysis involving counting the number of responses and calculating percentages.",
+        "timestamp": "2026-06-13T17:21:38.110566"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:22:01.786388"
+      },
+      {
+        "role": "assistant",
+        "content": "- The methodology used is a semi-structured interview [EJ1172284.pdf].\n- The interview format was chosen intentionally since it uses a set of prepared guiding questions and prompts [Dörnyei, 2007].\n- All the study participants were informed that the interview concerned the use of mobile devices for English study [EJ1172284.pdf].\n- The present researcher attempted to encourage the subjects to describe their learning experiences concerning the use of mobile devices for English study [EJ1172284.pdf].",
+        "timestamp": "2026-06-13T17:22:04.164148"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:22:17.472279"
+      },
+      {
+        "role": "assistant",
+        "content": "* Semi-structured interview format was chosen intentionally since it uses a set of prepared in advance guiding questions and prompts and interviewees are encouraged to elaborate on the problems raised during it [Dörnyei, 2007].\n* Guidelines and direction were provided by the interviewer but were also keen to follow up interesting developments and let the interviewee elaborate on certain issues [Dörnyei, 2007].\n* The study participants were informed that the interview concerned the use of mobile devices for English study and they were asked for permission to be digitally recorded [Miangah & Nezarat, 2012].",
+        "timestamp": "2026-06-13T17:22:19.905764"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:24:29.180090"
+      },
+      {
+        "role": "assistant",
+        "content": "- The methodology used in this passage is described as \"experiments\" which implies a scientific research approach.\n  - This approach typically involves collecting data, designing an experiment, and analyzing the results to draw conclusions.\n  - In this case, experiments are mentioned in relation to evaluating language models' ability to perform specific tasks (e.g., answering general knowledge questions, translating between languages).\n- The passage also mentions \"parameter count\" which is a common metric used in computer science to measure system complexity or performance. However, the exact formula for calculating parameter count is not provided, and no discussion of layer count or token counts.\n- There are several tables mentioned, but no specific information about their contents or formulas is given.\n- The passage includes several diagrams or illustrations (e.g., figures 2.1) which provide visual representations of concepts or systems being described.",
+        "timestamp": "2026-06-13T17:24:32.277821"
+      },
+      {
+        "role": "user",
+        "content": "what methodology is used in this",
+        "timestamp": "2026-06-13T17:25:07.692481"
+      },
+      {
+        "role": "assistant",
+        "content": "• \n- **Methodology**: The methodology used is based on the evaluation of language models' performance in various tasks such as zero-shot, one-shot, and few-shot learning.\n- \n- **Zero-Shot (0S)**: The zero-shot setting involves providing a natural language instruction describing the task without demonstrations or examples. This method assesses the model's ability to understand the task format and generate accurate outputs.\n- **One-Shot**: In one-shot, the model is only given forward passes at test time without any input. This evaluation assesses the model's ability to generalize from pre-trained parameters to perform specific tasks.\n- **Few-Shot**: The few-shot setting involves presenting the model with a small number of examples (typically dozens) for a task. This assessment evaluates the model's performance on that task and its ability to adapt to new input.\n\n[2005.14165v4.pdf]",
+        "timestamp": "2026-06-13T17:25:10.660417"
+      }
+    ],
+    "timestamp": "2026-06-13 17:26"
+  }
+]
