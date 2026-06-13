@@ -16,17 +16,20 @@ Designed and optimized for edge AI deployment using **NVIDIA Jetson** and **Olla
 
 ## 📸 Screenshots
 
-### 🏠 Home & Upload Interface
+### 🏠 Home Page
 ![Scholar Minds Home Page](docs/screenshots/home_page.png)
 
+### 📄 Upload Papers
+![Upload Papers](docs/screenshots/upload_papers.png)
+
+### 📚 My Library
+![My Library](docs/screenshots/my_library.png)
+
 ### 💬 Q&A Chat Interface (with Citations)
-![Scholar Minds Q&A Chat Page](docs/screenshots/qa_page.png)
+![Q&A Chat Interface](docs/screenshots/qa_page.png)
 
-### ℹ️ About Page — RAG Pipeline Flow
-![Scholar Minds About Page Top](<img width="833" height="719" alt="image" src="https://github.com/user-attachments/assets/a292a43a-d9e5-4662-b408-88493a93708a" />)
-
-### 🛠️ About Page — Tech Stack & Team
-![Scholar Minds About Page Bottom](docs/screenshots/about_page_bottom.png)
+### ℹ️ About Page — Project & RAG Pipeline
+![About Page](docs/screenshots/about_page.png)
 
 ---
 
@@ -122,9 +125,10 @@ ScholarMinds/
 └── docs/                    # Media & documentation
     └── screenshots/         # App interface screenshots
         ├── home_page.png
+        ├── upload_papers.png
+        ├── my_library.png
         ├── qa_page.png
-        ├── about_page_top.png
-        └── about_page_bottom.png
+        └── about_page.png
 ```
 
 ---
