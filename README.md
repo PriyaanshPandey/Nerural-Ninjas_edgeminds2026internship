@@ -23,7 +23,7 @@ Designed and optimized for edge AI deployment using **NVIDIA Jetson** and **Olla
 ![Scholar Minds Q&A Chat Page](docs/screenshots/qa_page.png)
 
 ### ℹ️ About Page — RAG Pipeline Flow
-![Scholar Minds About Page Top](docs/screenshots/about_page_top.png)
+![Scholar Minds About Page Top](<img width="833" height="719" alt="image" src="https://github.com/user-attachments/assets/a292a43a-d9e5-4662-b408-88493a93708a" />)
 
 ### 🛠️ About Page — Tech Stack & Team
 ![Scholar Minds About Page Bottom](docs/screenshots/about_page_bottom.png)
