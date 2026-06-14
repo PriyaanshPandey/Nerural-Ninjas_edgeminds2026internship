@@ -3,7 +3,6 @@
 ### Offline Research Paper Q&A using RAG on Edge Devices
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Streamlit App](https://static.streamlit.io/badge-gradient.svg)](https://streamlit.io/)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-orange.svg)](https://ollama.com)
 [![NVIDIA Jetson](https://img.shields.io/badge/Hardware-NVIDIA%20Jetson-green.svg)](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -137,8 +136,7 @@ ScholarMinds/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/ScholarMinds.git
-cd ScholarMinds
+git clone https:/PriyaanshPandey/Nerural-Ninjas_edgeminds2026internship.git
 ```
 
 ### 2. Set Up a Virtual Environment
@@ -212,8 +210,8 @@ Upon launching, Streamlit will bind to your network and generate unique access l
 ```text
   You can now view your Streamlit app in your browser.
 
-  Local URL:    http://localhost:8501
-  Network URL:  http://192.168.1.50:8501
+  Local URL:    e.g.(http://localhost:8501)
+  Network URL:  e.g.(http://192.168.1.50:8501)
 ```
 
 * **Local Host Access:** If you are browsing on the same device that is running the app, open:
